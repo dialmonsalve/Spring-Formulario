@@ -4,6 +4,22 @@ import java.util.Date;
 
 public class Usuario {
 
+	public String getPais() {
+		return pais;
+	}
+
+	public void setPais(String pais) {
+		this.pais = pais;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
 	public Long getId() {
 		return id;
 	}
@@ -53,10 +69,19 @@ public class Usuario {
 	}
 
 	private Long id;
+	
 	private String nombre;
+	
 	private String apellido;
+	
 	private Date fechaNacimiento;
+	
+	private String pais;
+	
+	private String email;
+	
 	private String username;
+	
 	private String password;
 
 }

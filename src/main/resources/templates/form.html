@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title th:text="${titulo}"></title>
+
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+
+</head>
+<body>
+	<div class="container">
+	
+	<div class="d-flex justify-content-center">
+		<h1 th:text="${titulo}"></h1>
+	</div>
+
+		<form action="" class="card" method="post">
+
+			<div class="row my-2 mx-1">
+				<div class="col-md-6">
+					<input type="text" class="form-control" id="nombre"
+						placeholder="Nombre">
+					</div>
+				<div class="col-md-6">
+					<input type="text" id="nombre" class="form-control"
+					placeholder="Apellido">
+				</div>
+			</div>
+
+			<div class="row my-2 mx-1">
+				<div class="col-md-6">
+					<input type="text" class="form-control" id="nombre"
+						placeholder="Fecha de nacimiento">
+					</div>
+				<div class="col-md-6">
+					<input type="text" id="nombre" class="form-control"
+					placeholder="email">
+				</div>
+			</div>
+
+			<div class="row my-2 mx-1">
+				<div class="col-md-6">
+					<input type="text" class="form-control" id="nombre"
+						placeholder="usuario">
+					</div>
+				<div class="col-md-6">
+					<input type="password" id="nombre" class="form-control"
+					placeholder="password">
+				</div>
+			</div>
+
+
+		</form>
+	</div>
+
+</body>
+</html>
