@@ -1,11 +1,13 @@
-package com.diamones.springboot.app.models;
+package com.diamones.springboot.app.models.domain;
 
 import java.util.Date;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 public class Usuario {
 
@@ -78,16 +80,19 @@ public class Usuario {
 	@NotEmpty
 	private String nombre;
 	
+	//@NotEmpty
 	private String apellido;
 	
+	@DateTimeFormat(pattern="yyyy-MM-dd")
+	@Past
 	private Date fechaNacimiento;
 	
+	@NotEmpty
 	private String pais;
 	
 	@Email
 	private String email;
-	
-	@Pattern(regexp = "[a-zA-Z]{9}")
+
 	private String username;
 	
 	@Size(min=4, max=8)

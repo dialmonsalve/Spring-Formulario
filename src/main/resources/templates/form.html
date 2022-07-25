@@ -60,10 +60,18 @@
 				</div>				
 				
 				<div class="col-md-6">
-					<input type="password" th:field="*{password}"	 class="form-control" id="password" 
+					<input type="password" th:field="*{password}" class="form-control" id="password" 
 						placeholder="password">
 					<div th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>
 				</div>				
+			</div>
+			
+			<div class="my-2 mx-1 px-3 col-md-6 ">
+				<select class="form-control" id="pais" th:field="*{pais}">
+					<option value="">--SELECCIONAR--</option>
+					<option th:each="pais: ${paisesMap.entrySet()}" th:text="${pais.value}" th:value="${pais.key}" ></option>
+				</select>
+				<div th:if="${#fields.hasErrors('pais')}" th:errors="*{pais}"></div>
 			</div>
 			
 			<div class="d-flex justify-content-center">
