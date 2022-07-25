@@ -2,7 +2,10 @@ package com.diamones.springboot.app.models;
 
 import java.util.Date;
 
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 public class Usuario {
 
@@ -22,11 +25,11 @@ public class Usuario {
 		this.email = email;
 	}
 
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -70,8 +73,9 @@ public class Usuario {
 		this.password = password;
 	}
 
-	private Long id;
+	private Integer id;
 	
+	@NotEmpty
 	private String nombre;
 	
 	private String apellido;
@@ -80,10 +84,13 @@ public class Usuario {
 	
 	private String pais;
 	
+	@Email
 	private String email;
 	
+	@Pattern(regexp = "[a-zA-Z]{9}")
 	private String username;
 	
+	@Size(min=4, max=8)
 	private String password;
 
 }
