@@ -2,6 +2,8 @@ package com.diamones.springboot.app.models;
 
 import java.util.Date;
 
+import javax.validation.constraints.NotNull;
+
 public class Usuario {
 
 	public String getPais() {

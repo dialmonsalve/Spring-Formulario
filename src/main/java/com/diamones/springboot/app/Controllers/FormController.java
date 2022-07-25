@@ -30,11 +30,17 @@ public class FormController {
 	@PostMapping("/form")
 	public String recibeFormulario(Model model) {
 		
+		usuario = new Usuario();
+		
+		usuario.setNombre("Diego");
+		
+		model.addAttribute("usuario", usuario);
+		
 		model.addAttribute("titulo", "Cliente creado satisfactorimente");
 		
 		return "resultado";
 	}
 	
-	
+	private Usuario usuario;
 
 }
